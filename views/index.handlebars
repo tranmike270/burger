@@ -10,10 +10,10 @@
 
 		<div class="col-md-6" id="burgers">
 			<div class="row justify-content-md-center">
-				<h3 class="">Menu</h3>
+				
 				<p class="justify-content-md-center">Click 'Devour' to Eat the corresponding burger!!</p>
 			</div>
-			
+			<h3 class="row burgerHolder justify-content-end">Menu</h3>
 			{{#each burgers}}
 			<div class="row burgerHolder justify-content-end">
 				<button class="burgerName btn" >
@@ -25,10 +25,10 @@
 		</div>
 		<div class="col-md-6" id="eatenBurgers">
 			<div class="row justify-content-md-center">
-				<h3 class="justify-content-md-center">Burgers Devoured</h3>
+				
 				<p class="justify-content-md-center">Click one of the burgers to add it back to the menu!</p>
 			</div>
-			
+			<h3 class="eatenBurgersHolder justify-content-md-center">Burgers Devoured</h3>
 			{{#each eatenBurgers}}
 			<div class="eatenBurgersHolder">
 				<button data-burgerid ="{{this.id}}" data-burgerstatus="eaten" class="btn burgerBTN">{{this.id}}. {{this.burger_name}}</button>
