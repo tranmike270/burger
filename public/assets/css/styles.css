@@ -1,0 +1,21 @@
+body {
+    background-color: yellow;
+}
+
+#pic {
+    width: 25%;
+    height: 50%;
+
+}
+
+.burgerHolder {
+    margin: 10px;
+}
+
+.burgerName {
+    margin-right: 10px;
+}
+
+.eatenBurgersHolder {
+    margin: 10px;
+}

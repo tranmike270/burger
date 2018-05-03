@@ -1,0 +1,47 @@
+
+<div class="container-fluid">
+	<div class="row justify-content-md-center" id="imageRow">
+<img src="https://openclipart.org/image/800px/svg_to_png/9075/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-1.png" alt="burger pic" id="pic">
+	</div>
+	<div class="row justify-content-md-center" id="titleRow">
+		<h2 >Eat a Burger!</h3>
+	</div>
+	<div class="row" id="burgersRow">
+
+		<div class="col-md-6" id="burgers">
+			<div class="row justify-content-md-center">
+				<h3 class="">Menu</h3>
+				<p class="justify-content-md-center">Click 'Devour' to Eat the corresponding burger!!</p>
+			</div>
+			
+			{{#each burgers}}
+			<div class="row burgerHolder justify-content-end">
+				<button class="burgerName btn" >
+					{{this.id}}. {{this.burger_name}}
+				</button>
+				<button data-burgerid="{{this.id}}" data-burgerstatus="available" class="btn burgerBTN">Devour</button>
+			</div>
+			{{/each}}
+		</div>
+		<div class="col-md-6" id="eatenBurgers">
+			<div class="row justify-content-md-center">
+				<h3 class="justify-content-md-center">Burgers Devoured</h3>
+				<p class="justify-content-md-center">Click one of the burgers to add it back to the menu!</p>
+			</div>
+			
+			{{#each eatenBurgers}}
+			<div class="eatenBurgersHolder">
+				<button data-burgerid ="{{this.id}}" data-burgerstatus="eaten" class="btn burgerBTN">{{this.id}}. {{this.burger_name}}</button>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+	<h3 class="row justify-content-md-center">Add a new burger!</h3>
+	<div class="row justify-content-md-center" id="newBurgerRow">
+		<form id="newBurger" class="button-size">
+			<textarea type="text" name="burgerName"></textarea>
+			<br>
+			<button class="btn btn-primary btn-md" id="newBurgerBtn" type="submit">ADD BURGER</button>
+		</form>
+	</div>
+</div>
